@@ -28,4 +28,63 @@
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+
+
+
+ .bird {
+    position: absolute;
+    top: 25%;
+    left: -150px;
+    width: 150px;
+    animation: flyRight 8s linear infinite;
+    transform-origin: center;
+  }
+
+    @keyframes flyScale {
+    0% {
+      left: 10px;
+      transform: scale(1);
     }
+    50% {
+      transform: scale(1.1); /* slightly bigger */
+    }
+    100% {
+      left: calc(100vw - 150px);
+      transform: scale(1);
+    }
+  }
+
+    @keyframes flyRight {
+    0% {
+      left: 10px;
+    }
+    100% {
+      left: calc(100vw - 150px);
+    }
+  }
+
+
+    .ship {
+    position: absolute;
+    bottom: 200px;
+    left: 200px;  
+    width: 200px;
+    height: auto;
+    animation: sail 15s linear infinite;
+  }
+
+  @keyframes sail {
+    0% {
+      left: 200px;
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); 
+    }
+    100% {
+      left: 100vw;
+      transform: translateY(0);
+    }
+  }
